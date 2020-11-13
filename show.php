@@ -33,6 +33,6 @@ while($Result = mysqli_fetch_array($res))
 <?php
 mysqli_close($conn);
 ?>
-<input type="button"> เพิ่ม </input>
+<input type="button" value="เพิ่ม">
 </body>
 </html>
