@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>ITF Lab</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
 <?php
@@ -12,7 +13,10 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table width="600" border="1">
+<br><br>
+<div class="container">
+
+<table width="100%" border="1">
   <tr>
     <th width="100"> <div align="center">Name</div></th>
     <th width="350"> <div align="center">Comment </div></th>
@@ -20,19 +24,25 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
   </tr>
 <?php
 while($Result = mysqli_fetch_array($res))
+
 {
 ?>
   <tr>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
+    <td><a  class="btn btn-danger" href="delete.php?id=<?php echo $Result['ID'];?>">ลบ</a> <a  class="btn btn-info" href="edit.php?id=<?php echo $Result['ID'];?>">แก้ไข</a></td>
+
   </tr>
 <?php
 }
 ?>
 </table>
+<br><br>
+<center>
+<a  class="btn btn-success" href="form.html">เพิ่ม</a>
 <?php
 mysqli_close($conn);
 ?>
-<a href ="https://itf-salisa.azurewebsites.net/form.html"><input type="button" value="เพิ่ม"></a>
+</div>
 </body>
 </html>
