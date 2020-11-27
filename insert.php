@@ -27,4 +27,16 @@ require('connect.php');
     <title>BMI</title>
 </head>
 
+<body>
+    <form action="insert.php" method="post">
+        <h1>Name</h1>
+        <input type="text" name="name">
+        <h1>Weight</h1>
+        <input type="text" name="weight">
+        <h1>Height</h1>
+        <input type="text" name="height">
+        <input type="submit" value="Submit" name="submit">
+    </form>
+</body>
+
 </html>
