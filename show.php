@@ -44,7 +44,7 @@ while($Result = mysqli_fetch_array($res))
             <td><?php echo $Result['height'];?></td>
             <td><?php echo $Result['bmi'];?></td>
             <td align="center">
-                <a href="edit.php?ID=<?php echo $Result['ID']?>" class="btn btn-outline-success" >UPDATE</a>
+                <a href="index.php?ID=<?php echo $Result['ID']?>" class="btn btn-outline-success" >UPDATE</a>
                 </tr>
         </tbody>
 <?php
