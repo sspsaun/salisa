@@ -20,9 +20,9 @@
     <div class="container">
     <h2>Edit Form</h2>
     <form action = "update.php?ID=<?php echo $row['ID']; ?>" method = "post" id="CommentForm">
-        <label for="Username">Price :</label>
+        <label for="Username">weight :</label>
           <input type="text" class="form-control" name = "weight" id="idweight" value="<?php echo "$row[weight]"; ?>" <br>
-        <label for="Username">Discount :</label>
+        <label for="Username">height :</label>
           <input type="text" class="form-control" name = "height" id="height" value="<?php echo "$row[height]"; ?>"> <br><br>
           <input type="submit" id="commentBtn"class="btn btn-outline-warning">
     </div>
