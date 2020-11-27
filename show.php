@@ -22,7 +22,7 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM itf');
 ?>
 <br>
-<div class="container" bg-white mx-auto rounded-lg shadow mt-3 p-4 mb-3">
+<div class="container" bg-yellow mx-auto rounded-lg shadow mt-3 p-4 mb-3">
     <table class = "table table-bordered table-hover" width="1500" align="center" border="1">
         <thead class="thead-dark">
     <tr>
