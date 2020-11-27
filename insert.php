@@ -10,7 +10,7 @@ require('connect.php');
 
         if(mysqli_query($conn, $sql)){
             echo "New record insert successfully";
-            echo "<a href='index.php'>back to home page</a>";
+            echo "<a href='show.php'>back to home page</a>";
         }
     }
 
