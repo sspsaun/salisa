@@ -44,14 +44,14 @@ while($Result = mysqli_fetch_array($res))
             <td><?php echo $Result['height'];?></td>
             <td><?php echo $Result['bmi'];?></td>
             <td align="center">
-                <a href="edit.php?ID=<?php echo $Result['ID']?>" class="btn btn-outline-success" >EDIT</a>
+                <a href="edit.php?ID=<?php echo $Result['ID']?>" class="btn btn-outline-success" >UPDATE</a>
                 </tr>
         </tbody>
 <?php
 }
 ?>
     </table>
-    <button type="button" class="btn btn-outline-warning" onclick ="window.location.href='form.html'">ADD</button> 
+    <button type="button" class="btn btn-outline-warning" onclick ="window.location.href='insert.php'">ADD</button> 
 <?php
 mysqli_close($conn);
 ?>
