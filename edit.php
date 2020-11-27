@@ -32,9 +32,9 @@ include("connect.php");
     </head>
     <body>
     <form method = "POST" id="CommentForm" >
-    Name:<br>
+    Weight:<br>
     <input type="text" name = "weight" value="<?php echo $res['weight'];?>"> <br>
-    Comment:<br>
+    Height:<br>
     <input type="text" name="height" value="<?php echo $res['height'];?>"><br>
     
     <input type="submit" name="submit">
