@@ -1,14 +1,14 @@
 <?php
 include("connect.php");
     $id=$_GET['id'];
-    $infosql = "SELECT * FROM guestbook WHERE ID = '".$id."'";
+    $infosql = "SELECT * FROM itf WHERE ID = '".$id."'";
     $inforesult = mysqli_query($conn,$infosql);
     $res = mysqli_fetch_array($inforesult);
-    $name = $_POST['name'];
-    $comment = $_POST['comment'];
+    $weight = $_POST['weight'];
+    $height = $_POST['height'];
  if(isset($_POST['submit'])){
     
-    $update = "UPDATE guestbook SET Name = '".$name."', Comment = '".$comment."' WHERE guestbook.`ID` = '".$id."';";  
+    $update = "UPDATE itf SET weight = '".$weight."', height = '".$height."' WHERE itf.`ID` = '".$id."';";  
     $result= mysqli_query($conn,$update);
     if($result){
         echo "<script>alert('แก้ไขเสร็จสิ้น')</script>";
@@ -33,9 +33,9 @@ include("connect.php");
     <body>
     <form method = "POST" id="CommentForm" >
     Name:<br>
-    <input type="text" name = "name" value="<?php echo $res['Name'];?>"> <br>
+    <input type="text" name = "weight" value="<?php echo $res['weight'];?>"> <br>
     Comment:<br>
-    <input type="text" name="comment" value="<?php echo $res['Comment'];?>"><br>
+    <input type="text" name="height" value="<?php echo $res['height'];?>"><br>
     
     <input type="submit" name="submit">
   </form> 
