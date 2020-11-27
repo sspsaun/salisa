@@ -18,7 +18,7 @@ include('connect.php');
 
   <tbody>
 <?php
-$sql="SELECT * FROM lab;"
+$sql="SELECT * FROM lab";
 $result=mysqli_query($conn,$sql);
 if(mysqli_num_rows($result) > 0){
 while(mysqli_fetch_array($result)){
